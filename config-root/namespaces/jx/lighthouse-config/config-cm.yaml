@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        xzfvictor/jx-python-http: true
         xzfvictor/jx3-eks-vault: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        xzfvictor/jx-python-http: merge
         xzfvictor/jx3-eks-vault: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - xzfvictor/jx3-eks-vault
+        - xzfvictor/jx-python-http
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - xzfvictor/jx3-eks-vault
+        - xzfvictor/jx-python-http
       target_url: http://dashboard-jx.54.66.180.91.nip.io
 kind: ConfigMap
 metadata:

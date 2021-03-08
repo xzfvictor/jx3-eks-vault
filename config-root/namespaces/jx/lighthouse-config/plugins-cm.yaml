@@ -6,6 +6,10 @@ data:
       repos:
       - xzfvictor/jx3-eks-vault
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - xzfvictor/jx-python-http
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -20,6 +24,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      xzfvictor/jx-python-http:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       xzfvictor/jx3-eks-vault:
       - config-updater
       - approve
@@ -49,6 +69,11 @@ data:
     - repos:
       - xzfvictor/jx3-eks-vault
       trusted_org: todo
+    - repos:
+      - xzfvictor/jx-python-http
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null

@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: xzfvictor
+    provider: github
+    repository: jx-python-http
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: xzfvictor-jx-python-http
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/xzfvictor/jx-python-http.git
+  org: xzfvictor
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx-python-http
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/xzfvictor/jx-python-http
