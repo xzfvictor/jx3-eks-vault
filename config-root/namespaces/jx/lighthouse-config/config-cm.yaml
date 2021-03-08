@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - xzfvictor/jx3-eks-vault
-      target_url: http://dashboard-jx.
+      target_url: http://dashboard-jx.54.66.180.91.nip.io
 kind: ConfigMap
 metadata:
   creationTimestamp: null

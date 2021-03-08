@@ -10,7 +10,7 @@ metadata:
   namespace: jx
   annotations:
     wave.pusher.com/update-on-config-change: 'true'
-    jenkins-x.io/hash: '1386d820da9abc723201c8185f1be0c88a5eadea2b4c00c2af600ed179826210'
+    jenkins-x.io/hash: 'cebb7c2979925d80adaf43b62f6937b53a2e18d5a4acb1da08cfc8711770b18d'
 spec:
   replicas: 1
   selector:
@@ -29,7 +29,7 @@ spec:
           imagePullPolicy: IfNotPresent
           args:
             - --namespace=jx
-            - --dashboard-url=http://dashboard-jx.change.me
+            - --dashboard-url=http://dashboard-jx.54.66.180.91.nip.io
             - --dashboard-template=namespaces/{{ .Namespace }}/pipelineruns/{{ .PipelineRun }}
           ports:
             - name: metrics

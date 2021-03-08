@@ -64,9 +64,17 @@
     description: A Helm chart for the resources for JX Boot
     home: https://github.com/jenkins-x-charts/jxboot-helmfile-resources
     icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
+    ingresses:
+    - name: chartmuseum
+      url: http://chartmuseum-jx.54.66.180.91.nip.io/
+    - name: hook
+      url: http://hook-jx.54.66.180.91.nip.io/hook
+    - name: nexus
+      url: http://nexus-jx.54.66.180.91.nip.io/
     name: jxboot-helmfile-resources
     repositoryName: jenkins-x
     repositoryUrl: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+    resourcePath: config-root/namespaces/jx/jxboot-helmfile-resources
     version: 1.0.31
   - apiVersion: v2
     appVersion: 3.0.5
@@ -75,15 +83,21 @@
     name: jenkins-x-crds
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jenkins-x-crds
     version: 3.0.5
   - apiVersion: v1
     appVersion: latest
+    applicationUrl: http://dashboard-jx.54.66.180.91.nip.io
     description: Web UI for Jenkins X, with a clear goal - visualize the pipelines - and their logs.
     home: https://github.com/jenkins-x/jx-pipelines-visualizer
     icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
+    ingresses:
+    - name: jx-pipelines-visualizer
+      url: http://dashboard-jx.54.66.180.91.nip.io
     name: jx-pipelines-visualizer
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jx-pipelines-visualizer
     sources:
     - https://github.com/jenkins-x/jx-pipelines-visualizer
     version: 1.1.11
@@ -95,6 +109,7 @@
     name: jx-preview
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
+    resourcePath: config-root/namespaces/jx/jx-preview
     version: 0.0.168
   - apiVersion: v1
     appVersion: 0.0.939
@@ -105,6 +120,7 @@
     name: lighthouse
     repositoryName: jenkins-x
     repositoryUrl: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+    resourcePath: config-root/namespaces/jx/lighthouse
     version: 0.0.939
   - apiVersion: v1
     description: A Helm chart for Kubernetes
@@ -113,6 +129,7 @@
     name: nexus
     repositoryName: jenkins-x
     repositoryUrl: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+    resourcePath: config-root/namespaces/jx/nexus
     version: 0.1.37
   - apiVersion: v1
     appVersion: 0.12.0
@@ -127,6 +144,7 @@
     name: chartmuseum
     repositoryName: stable
     repositoryUrl: https://charts.helm.sh/stable
+    resourcePath: config-root/namespaces/jx/chartmuseum
     version: 2.14.2
   - apiVersion: v2
     appVersion: 3.0.0
@@ -139,6 +157,7 @@
     name: jx-build-controller
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jx-build-controller
     sources:
     - https://github.com/jenkins-x-plugins/jx-build-controller
     version: 0.0.33
@@ -160,6 +179,7 @@
     name: jx-kh-check
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jx-kh-check-health-checks-jx
     sources:
     - https://github.com/jenkins-x-plugins/jx-kh-check
     version: 0.0.56
@@ -200,6 +220,7 @@
     name: ingress-nginx
     repositoryName: ingress-nginx
     repositoryUrl: https://kubernetes.github.io/ingress-nginx
+    resourcePath: config-root/namespaces/nginx/ingress-nginx-nginx-ingress
     sources:
     - https://github.com/kubernetes/ingress-nginx
     type: application
@@ -220,6 +241,7 @@
     name: kubernetes-external-secrets
     repositoryName: external-secrets
     repositoryUrl: https://external-secrets.github.io/kubernetes-external-secrets
+    resourcePath: config-root/namespaces/secret-infra/kubernetes-external-secrets
     sources:
     - https://github.com/external-secrets/kubernetes-external-secrets
     version: 6.3.0
@@ -233,6 +255,7 @@
     name: pusher-wave
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/secret-infra/pusher-wave
     sources:
     - https://github.com/pusher/wave
     version: 0.4.16
@@ -247,4 +270,5 @@
     name: tekton-pipeline
     repositoryName: cdf
     repositoryUrl: https://cdfoundation.github.io/tekton-helm-chart
+    resourcePath: config-root/namespaces/tekton-pipelines/tekton-pipeline
     version: 0.21.0
