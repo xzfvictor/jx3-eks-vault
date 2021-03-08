@@ -1,0 +1,8 @@
+# Source: jx-python-http/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: jx-python-http-jx-python-http
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
