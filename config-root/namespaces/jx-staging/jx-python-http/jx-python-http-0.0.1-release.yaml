@@ -1,0 +1,49 @@
+# Source: jx-python-http/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-03-08T11:29:36Z"
+  deletionTimestamp: null
+  name: 'jx-python-http-0.0.1'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 0.0.1
+      sha: e1b218e26bacbf160c38d465dedd8c8f7ad06e88
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: 9e7cfd03e862736564bf39671b507e0fac270b88
+    - author:
+        email: xzfvictor@yahoo.com
+        name: Victor Xian
+      branch: master
+      committer:
+        email: xzfvictor@yahoo.com
+        name: Victor Xian
+      message: |
+        chore: Jenkins X build pack
+      sha: c5cd97cc6b0ad54d4324dc44d9ea5195d3c7e0a1
+  gitHttpUrl: https://github.com/xzfvictor/jx-python-http
+  gitOwner: xzfvictor
+  gitRepository: jx-python-http
+  name: 'jx-python-http'
+  releaseNotesURL: https://github.com/xzfvictor/jx-python-http/releases/tag/v0.0.1
+  version: v0.0.1
+status: {}
