@@ -1,0 +1,13 @@
+# Source: jxboot-helmfile-resources/templates/build-bot-serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: "tekton-bot"
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::361124713625:role/tf-jx-champion-ox-tekton-bot
+  namespace: jx
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+secrets:
+  - name: tekton-container-registry-auth
+  - name: tekton-git
